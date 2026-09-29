@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Regex — работа с регулярками прямо в VS Code</title>
+    <meta name="description" content="Railroad-диаграммы, Explain, ReDoS-детектор, Unit-тесты и Preview на реальных файлах. Всё в одном расширении для VS Code.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="#" class="logo">
+            <span class="logo-mark">.*</span>
+            <span class="logo-text">Ghost Regex</span>
+        </a>
+        <div class="nav-links">
+            <a href="#features">Возможности</a>
+            <a href="#pricing">Цены</a>
+            <a href="#faq">FAQ</a>
+            <a href="#report">Поддержка</a>
+            <a href="#" class="btn btn-primary btn-sm">Установить</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="container">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            Расширение для VS Code
+        </div>
+        <h1 class="hero-title">
+            Регулярки прямо в VS Code.<br>
+            <span class="gradient-text">Без вкладок, копипаста и сюрпризов в проде.</span>
+        </h1>
+        <p class="hero-sub">
+            Railroad-диаграммы, Explain, ReDoS-детектор, Unit-тесты и Preview
+            на реальных файлах — всё в одном расширении. Работает офлайн.
+        </p>
+        <div class="hero-buttons">
+            <a href="#" class="btn btn-primary btn-lg">
+                Установить бесплатно
+            </a>
+            <a href="#pricing" class="btn btn-secondary btn-lg">
+                Купить Pro за $6/мес
+            </a>
+        </div>
+        <div class="hero-meta">
+            94 сниппета · 6 диалектов · ReDoS-детектор с автопочинкой · Без телеметрии
+        </div>
+
+        <div class="hero-screenshot">
+            <div class="screenshot-frame">
+                <div class="screenshot-bar">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                    <span class="screenshot-title">Ghost Regex — Railroad</span>
+                </div>
+                <img src="img/screenshot-1.png" alt="Railroad-диаграмма регулярного выражения">
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- PAIN -->
+<section class="pain">
+    <div class="container">
+        <h2 class="section-title">Знакомо?</h2>
+        <div class="pain-grid">
+            <div class="pain-card">
+                <div class="pain-icon">❌</div>
+                <p>Открываешь онлайн-сервис в браузере. Копируешь паттерн туда. Копируешь обратно. И так по 20 раз в день.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">❌</div>
+                <p>Тестируешь regex на выдуманных строках, а в проде он падает на реальных данных.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">❌</div>
+                <p>Пишешь <code>(a+)+$</code> и не знаешь, что это мина замедленного действия, которая положит сервер под нагрузкой.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">❌</div>
+                <p>Хочешь понять, что делает чужой regex — а в голове каша из квантификаторов и lookaround.</p>
+            </div>
+        </div>
+        <p class="pain-footer">Ghost Regex закрывает всё это. Из VS Code. За один клик.</p>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+    <div class="container">
+        <h2 class="section-title">Что умеет Ghost Regex</h2>
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Railroad-диаграмма</h3>
+                <p>Каждый токен — визуально. Якоря зелёные, группы фиолетовые, повторы оранжевые. Наводишь мышкой — тултип с объяснением. Скачиваешь в SVG одной кнопкой.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌳</div>
+                <h3>Explain и AST-дерево</h3>
+                <p>Разбор регекса на 100+ типов токенов. Понятное дерево вложенности — группы, повторы, lookaround. Видно, что реально делает паттерн.</p>
+            </div>
+
+            <div class="feature-card feature-card-warn">
+                <div class="feature-icon">🛡️</div>
+                <h3>ReDoS-детектор с автопочинкой</h3>
+                <p>Обнаружит вложенные квантификаторы до того, как они станут проблемой. Покажет уровень уязвимости. Предложит исправленный паттерн в один клик.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Preview на реальном файле</h3>
+                <p>Выбираешь файл — расширение подсвечивает совпадения прямо в содержимом. Не в песочнице, не на выдуманной строке. На реальных данных.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Unit-тесты для regex</h3>
+                <p>Сохраняешь тестовые строки с ожидаемым результатом — прогоняешь паттерн против всего набора одной кнопкой. Провалился — увидишь красный ✗ на конкретном тесте.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Convert в 5 языков</h3>
+                <p>Один regex — код для Python, JavaScript, Go, Rust, Java. С правильным экранированием. Больше не надо искать синтаксис в документации.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>94 сниппета</h3>
+                <p>Email, URL, IPv4, UUID, JWT, ИНН, СНИЛС, даты, пароли — 8 категорий готовых шаблонов. Вставил — работает.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">↩️</div>
+                <h3>Sync Back</h3>
+                <p>Правой кнопкой на регекс в коде → «Объяснить выделенное» → правишь в панели → «Применить в редактор». Всё в одном месте.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- REDOS SHOWCASE -->
+<section class="redos-showcase">
+    <div class="container redos-grid">
+        <div class="redos-text">
+            <div class="redos-badge">ReDoS-детектор</div>
+            <h2>Узнай о ReDoS до того, как сервис ляжет</h2>
+            <p>
+                Вложенные квантификаторы и пересекающиеся альтернативы — главные причины
+                катастрофического бэктрэкинга. Одна строка от пользователя — и сервер занят
+                на минуты. Ghost Regex находит их заранее и предлагает исправление.
+            </p>
+            <ul class="redos-list">
+                <li>Уровень уязвимости: low / high / critical</li>
+                <li>Объяснение человеческим языком</li>
+                <li>Автоматический fix в один клик</li>
+            </ul>
+        </div>
+        <div class="redos-image">
+            <img src="img/screenshot-3.png" alt="ReDoS-предупреждение с автоматическим исправлением">
+        </div>
+    </div>
+</section>
+
+<!-- SNIPPETS SHOWCASE -->
+<section class="snippets-showcase">
+    <div class="container snippets-grid">
+        <div class="snippets-image">
+            <img src="img/screenshot-2.png" alt="94 сниппета в 8 категориях">
+        </div>
+        <div class="snippets-text">
+            <div class="snippets-badge">94 сниппета</div>
+            <h2>8 категорий готовых шаблонов</h2>
+            <p>
+                Валидация, даты, числа, Web, разработка, извлечение, Россия, координаты.
+                От Email и UUID до ИНН, СНИЛС и паспорта РФ — всё уже написано и протестировано.
+            </p>
+            <p class="snippets-note">
+                Email, URL и IPv4 — бесплатно. Остальные 91 открываются в Pro.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+    <div class="container">
+        <h2 class="section-title">Free и Pro</h2>
+        <p class="section-sub">Бесплатная версия — не демо. Это полноценный инструмент.</p>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+                <div class="price-header">
+                    <h3>Free</h3>
+                    <div class="price-value">$0</div>
+                    <div class="price-period">навсегда</div>
+                </div>
+                <ul class="price-features">
+                    <li class="included">Railroad-диаграмма</li>
+                    <li class="included">Explain + AST-дерево</li>
+                    <li class="included">ReDoS-детектор</li>
+                    <li class="included">Convert в Python и JavaScript</li>
+                    <li class="included">3 сниппета (Email, URL, IPv4)</li>
+                    <li class="included">Live-тест с флагами</li>
+                    <li class="included">Диалекты: JavaScript, Python</li>
+                </ul>
+                <a href="#" class="btn btn-secondary btn-block">Установить бесплатно</a>
+            </div>
+
+            <div class="price-card price-card-pro">
+                <div class="price-badge">Рекомендуем</div>
+                <div class="price-header">
+                    <h3>Pro</h3>
+                    <div class="price-value">$6<span class="price-unit">/мес</span></div>
+                    <div class="price-period">отмена в любой момент</div>
+                </div>
+                <ul class="price-features">
+                    <li class="included">Всё из Free, плюс:</li>
+                    <li class="included highlight">Preview на реальном файле</li>
+                    <li class="included highlight">Все 94 сниппета</li>
+                    <li class="included highlight">Convert в Go, Rust, Java</li>
+                    <li class="included highlight">Диалекты: Go, Rust, Java, PCRE</li>
+                    <li class="included highlight">Sync Back</li>
+                    <li class="included highlight">Экспорт диаграмм в SVG</li>
+                    <li class="included highlight">Unit-тесты для regex</li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-block">Купить Pro</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+    <div class="container container-narrow">
+        <h2 class="section-title">Работает локально. Без телеметрии.</h2>
+        <div class="why-quote">
+            <p>Регулярки часто содержат чувствительные данные — пути к файлам, форматы дат, структуру логов, схемы API. Отправлять их на сторонний сервис — плохая идея.</p>
+            <p>Ghost Regex работает полностью внутри VS Code. Preview читает файл с твоего диска. ReDoS-анализ идёт на твоей машине. Никаких запросов на серверы, никакой телеметрии, никаких аккаунтов.</p>
+            <p class="why-highlight">Твои паттерны остаются твоими.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="container container-narrow">
+        <h2 class="section-title">Частые вопросы</h2>
+
+        <details class="faq-item">
+            <summary>Куда уходят мои данные?</summary>
+            <p>Никуда. Всё работает офлайн внутри VS Code. Preview читает файл локально, ReDoS-анализ идёт на твоей машине. Никаких запросов на серверы, никакой телеметрии.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Будет ли версия для JetBrains / Sublime?</summary>
+            <p>Сейчас только VS Code. Про другие редакторы думаем — но пока фокус на одном.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Как оплатить из России?</summary>
+            <p>Pro продаётся через Gumroad. Если возникнут сложности с оплатой — напиши через форму ниже, подберём вариант. Мы работаем с пользователями из РФ.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Что если Pro не подойдёт?</summary>
+            <p>Отмена подписки в один клик. Без звонков, без объяснений, без удержания.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Чем это отличается от других расширений?</summary>
+            <p>Другие делают одну вещь: диаграммы, или сниппеты, или Explain. Ghost Regex собирает всё в одном месте. Плюс Preview на реальном файле — такого нет ни у кого.</p>
+        </details>
+
+    </div>
+</section>
+
+<!-- REPORT -->
+<section class="report" id="report">
+    <div class="container container-narrow">
+        <h2 class="section-title">Нашли баг или есть предложение?</h2>
+        <p class="section-sub">
+            Расширение молодое. Каждый отзыв — шанс сделать его лучше.
+            Присылайте баги, идеи, критические замечания — я отвечаю лично.
+        </p>
+
+        <form class="report-form" action="https://formsubmit.co/hello@ghost-regex.dev" method="POST" enctype="multipart/form-data">
+            <!-- Скрытые настройки FormSubmit -->
+            <input type="hidden" name="_subject" value="Ghost Regex — новый отчёт">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="index.html#report">
+
+            <div class="form-row">
+                <label for="report-type">Тип обращения</label>
+                <select id="report-type" name="type" required>
+                    <option value="bug">Ошибка / баг</option>
+                    <option value="idea">Предложение / идея</option>
+                    <option value="license">Проблема с оплатой / лицензией</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="report-desc">Описание проблемы</label>
+                <textarea
+                    id="report-desc"
+                    name="description"
+                    rows="6"
+                    placeholder="Что делал, что ожидал, что получилось. Чем подробнее — тем быстрее разберусь."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-row">
+                <label for="report-steps">Как воспроизвести (если баг)</label>
+                <textarea
+                    id="report-steps"
+                    name="steps"
+                    rows="3"
+                    placeholder="1. Открыл панель... 2. Ввёл паттерн... 3. Нажал кнопку..."
+                ></textarea>
+            </div>
+
+            <div class="form-row">
+                <label for="report-file">Скриншот (необязательно)</label>
+                <input type="file" id="report-file" name="attachment" accept="image/*">
+                <p class="form-hint">PNG, JPG, GIF — до 10 МБ.</p>
+            </div>
+
+            <div class="form-row">
+                <label for="report-email">Email для ответа (необязательно)</label>
+                <input
+                    type="email"
+                    id="report-email"
+                    name="email"
+                    placeholder="Если хотите, чтобы я ответил"
+                >
+                <p class="form-hint">Без email тоже приму — просто не смогу написать в ответ.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+                Отправить отчёт
+            </button>
+
+            <p class="form-note">
+                Или напишите напрямую: <a href="mailto:hello@ghost-regex.dev">hello@ghost-regex.dev</a>
+            </p>
+        </form>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Работай с регулярками там, где пишешь код.</h2>
+        <p>Установка занимает 30 секунд.</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn btn-primary btn-lg">Установить бесплатно</a>
+            <a href="#pricing" class="btn btn-secondary btn-lg">Купить Pro</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <span class="logo-mark">.*</span>
+            <span>Ghost Regex</span>
+        </div>
+        <div class="footer-links">
+            <a href="#features">Возможности</a>
+            <a href="#pricing">Цены</a>
+            <a href="#faq">FAQ</a>
+            <a href="#report">Поддержка</a>
+            <a href="mailto:hello@ghost-regex.dev">Контакты</a>
+        </div>
+        <div class="footer-copy">
+            © 2026 Ghost Regex
+        </div>
+    </div>
+</footer>
+<script>
+(function () {
+    'use strict';
+
+    // 1. Reveal-on-scroll
+    const revealElements = document.querySelectorAll(
+        'section > .container, .feature-card, .pain-card, .price-card, .redos-image, .snippets-image, .why-quote'
+    );
+    revealElements.forEach(el => el.classList.add('reveal'));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // 2. Navbar при скролле
+    const nav = document.querySelector('.nav');
+    if (nav) {
+        const handleNavScroll = () => {
+            nav.classList.toggle('nav-scrolled', window.scrollY > 20);
+        };
+        window.addEventListener('scroll', handleNavScroll, { passive: true });
+        handleNavScroll();
+    }
+
+    // 3. Активный пункт в навбаре
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.toggle('nav-link-active', link.getAttribute('href') === '#' + id);
+                });
+            }
+        });
+    }, { threshold: 0.4, rootMargin: '-80px 0px -50% 0px' });
+    sections.forEach(section => sectionObserver.observe(section));
+
+    // 4. Мобильное меню
+    const navInner = document.querySelector('.nav-inner');
+    const navLinksContainer = document.querySelector('.nav-links');
+    if (navInner && navLinksContainer) {
+        const burger = document.createElement('button');
+        burger.className = 'nav-burger';
+        burger.setAttribute('aria-label', 'Меню');
+        burger.innerHTML = '<span></span><span></span><span></span>';
+        navInner.appendChild(burger);
+
+        burger.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('nav-open');
+            burger.classList.toggle('nav-burger-open');
+        });
+
+        navLinksContainer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksContainer.classList.remove('nav-open');
+                burger.classList.remove('nav-burger-open');
+            });
+        });
+    }
+
+    // 5. Год в футере
+    const footerCopy = document.querySelector('.footer-copy');
+    if (footerCopy) {
+        footerCopy.textContent = '© ' + new Date().getFullYear() + ' Ghost Regex';
+    }
+
+    // 6. Плавный скролл с учётом navbar
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href === '') return;
+            const target = document.querySelector(href);
+            if (!target) return;
+            e.preventDefault();
+            const navHeight = nav ? nav.offsetHeight : 0;
+            const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        });
+    });
+})();
+</script>
+</body>
+</html>
+</body>
+</html>
